@@ -85,10 +85,10 @@ print(X_test.head(6))
 print(y_train.shape)
 print(y_test.shape)
 
-# export_csv = y_test.to_csv(r'C:\Users\Arslan\Desktop\pmc models python\y_test.csv', index=None, header=True)
-# export_csv = X_test.to_csv(r'C:\Users\Arslan\Desktop\pmc models python\X_test.csv', index=None, header=True)
-# export_csv = X_train.to_csv(r'C:\Users\Arslan\Desktop\pmc models python\X_train.csv', index=None, header=True)
-# export_csv = y_train.to_csv(r'C:\Users\Arslan\Desktop\pmc models python\y_train.csv', index=None, header=True)
+# export_csv = y_test.to_csv(r'y_test.csv', index=None, header=True)
+# export_csv = X_test.to_csv(r'X_test.csv', index=None, header=True)
+# export_csv = X_train.to_csv(r'X_train.csv', index=None, header=True)
+# export_csv = y_train.to_csv(r'y_train.csv', index=None, header=True)
 
 #######################################################################
 # Applying linear regression to data
@@ -96,8 +96,8 @@ print(y_test.shape)
 
 # Model A
 # Type: Linear
-# Predictor variables: Rapl, FLOPS
-# Output variable = WattsUp
+# Predictor variables: Time, RAPL, CPU FLOPS, ProblemSize
+# Output variable = Dynamic Energy
 # With Intercept
 
 modelA = LinearRegression(fit_intercept=True)
@@ -133,8 +133,8 @@ print(modelAprediction)
 
 # Model B
 # Type: Linear
-# Predictor variables: Rapl, FLOPS
-# Output variable = WattsUp
+# Predictor variables: Time, RAPL, CPU FLOPS, ProblemSize
+# Output variable = Dynamic Energy 
 # Without Intercept
 
 modelB = LinearRegression(fit_intercept=False)
@@ -169,8 +169,8 @@ print(modelBprediction.head(5))
 
 # Model C
 # Type: Linear
-# Predictor variables: Rapl, FLOPS
-# Output variable = WattsUp
+# Predictor variables: Time, RAPL, CPU FLOPS, ProblemSize
+# Output variable = Dynamic Energy
 # Without Intercept
 # positive coefficients only
 
